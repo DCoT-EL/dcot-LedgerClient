@@ -16,12 +16,11 @@ public class ChainOfCustody {
     private String documentId;
     private String text;
     private String status;
-    private String role;
 
     public ChainOfCustody() {
     }
 
-    public ChainOfCustody(String status, String id, String trackingId, Integer weightOfParcel, String sortingCenterDestination, String distributionOfficeCode, String distributionZone, String deliveryMan, String codeOwner, String documentId, String text, String role) {
+    public ChainOfCustody(String status, String id, String trackingId, Integer weightOfParcel, String sortingCenterDestination, String distributionOfficeCode, String distributionZone, String deliveryMan, String codeOwner, String documentId, String text) {
 
         this.id = id;
         this.trackingId = trackingId;
@@ -34,7 +33,6 @@ public class ChainOfCustody {
         this.documentId = documentId;
         this.text = text;
         this.status = status;
-        this.role = role;
     }
 
 
@@ -126,13 +124,7 @@ public class ChainOfCustody {
         this.documentId = documentId;
     }
 
-    public String getRole() {
-        return role;
-    }
 
-    public void setRole(String role) {
-        this.role = role;
-    }
 
     @Override
     public boolean equals(Object o) {
