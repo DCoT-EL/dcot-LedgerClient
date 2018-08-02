@@ -33,6 +33,7 @@ public class ChainOfCustody {
         this.documentId = documentId;
         this.text = text;
         this.status = status;
+   
     }
 
 
@@ -123,8 +124,6 @@ public class ChainOfCustody {
     public void setDocumentId(String documentId) {
         this.documentId = documentId;
     }
-
-
 
     @Override
     public boolean equals(Object o) {
