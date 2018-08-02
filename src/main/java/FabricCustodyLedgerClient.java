@@ -50,11 +50,11 @@ final public class FabricCustodyLedgerClient extends HLFLedgerClient implements 
         }
     }
 
-    /* @Override
+    @Override
      public String doRegisterEvent(String eventName, ChaincodeEventListener chaincodeEventListener) throws JLedgerClientException {
          return super.doRegisterEvent(eventName, chaincodeEventListener);
      }
- */
+
     private String doInvokeByJson(Function fcn, List<String> args) throws JLedgerClientException {
         final InvokeReturn invokeReturn = ledgerInteractionHelper.invokeChaincode(fcn.name(), args);
         try {
@@ -85,7 +85,7 @@ final public class FabricCustodyLedgerClient extends HLFLedgerClient implements 
 
 
     @Override
-    public final ChainOfCustody initNewChain(ChainOfCustody chainOfCustody) throws  JLedgerClientException {
+    public final ChainOfCustody initNewChain(ChainOfCustody chainOfCustody) throws JLedgerClientException {
         if (chainOfCustody == null) {
             throw new JLedgerClientException(Function.initNewChain.name() + " is in error, No input data!");
         }
@@ -186,7 +186,7 @@ final public class FabricCustodyLedgerClient extends HLFLedgerClient implements 
         final String payload = doInvokeByJson(Function.getAssetDetails, args);
         log.debug("Payload retrieved: " + payload);
         final ChainOfCustody chainOfCustody = (ChainOfCustody) JsonConverter.convertFromJson(payload, ChainOfCustody.class, false);
-        return  chainOfCustody;
+        return chainOfCustody;
     }
 
     @Override

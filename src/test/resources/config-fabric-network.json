@@ -8,7 +8,7 @@
   "chaincode": {
     "path": "github.com/hyperledger/fabric/examples/chaincode/go/dcot-chaincode",
     "name": "dcot-chaincode",
-    "version": "3.0"
+    "version": "3.2"
   },
   "organizations": [
     {

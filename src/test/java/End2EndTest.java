@@ -70,9 +70,9 @@ public class End2EndTest {
         try {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             assetID = chainOfCustody1.getId();
-            receiverID = "5a9654f5-ff72-49dd-9be3-b3b524228556";
+            receiverID = "b6a14d80-6262-4d03-b8ea-4ee20ddfe075";
             fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
-            ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.initNewChain(chainOfCustody3);
+            //ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.initNewChain(chainOfCustody3);
         } catch (JLedgerClientException e) {
             e.printStackTrace();
         }
