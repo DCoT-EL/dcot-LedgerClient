@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dcot-jLedgerClient" />
+        <module name="dcotjLedgerClient" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dcotjLedgerClient" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

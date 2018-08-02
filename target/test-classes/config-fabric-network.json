@@ -3,12 +3,12 @@
   "type": "hlfv1.1",
   "channelName": "ledgerchannel",
   "timeout": 5000,
-  "cryptoconfigdir": "/home/claudio/Scrivania/crypto-config",
+  "cryptoconfigdir": "",
   "tls": false,
   "chaincode": {
     "path": "github.com/hyperledger/fabric/examples/chaincode/go/dcot-chaincode",
     "name": "dcot-chaincode",
-    "version": "1.1"
+    "version": "3.2"
   },
   "organizations": [
     {
@@ -33,9 +33,10 @@
       ],
       "users": [
         {
-          "name": "Admin",
+          "name": "clod16",
+          "secret":"faredge2018",
           "roles": [
-            "admin"
+            "user"
           ]
         }
       ]
