@@ -7,6 +7,10 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.assertFalse;
 
 public class End2EndTest {
@@ -60,16 +64,18 @@ public class End2EndTest {
         String receiverID;
 
         final ChainOfCustody chainOfCustody = new ChainOfCustody();
+        final ChainOfCustody chainOfCustody3 = new ChainOfCustody();
         chainOfCustody.setDocumentId("1234");
+        chainOfCustody3.setDocumentId("4321");
         try {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             assetID = chainOfCustody1.getId();
-            receiverID = "admin";
+            receiverID = "5a9654f5-ff72-49dd-9be3-b3b524228556";
             fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
+            ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.initNewChain(chainOfCustody3);
         } catch (JLedgerClientException e) {
             e.printStackTrace();
         }
-
 
     }
 
@@ -83,7 +89,7 @@ public class End2EndTest {
         try {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             assetID = chainOfCustody1.getId();
-            receiverID = "admin";
+            receiverID = "b6a14d80-6262-4d03-b8ea-4ee20ddfe075";
             fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
             fabricCustodyLedgerClient.completeTransfer(assetID);
             assertFalse(false);
@@ -128,6 +134,25 @@ public class End2EndTest {
 
     @Test
     public void testUpdateDocument() {
+        String assetID, docID;
+
+        final ChainOfCustody chainOfCustody = new ChainOfCustody();
+        chainOfCustody.setDocumentId("1234");
+
+        try {
+            ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
+
+            assetID = chainOfCustody1.getId();
+            docID = "4321";
+            fabricCustodyLedgerClient.updateDocument(assetID, docID);
+            fabricCustodyLedgerClient.updateDocument(assetID, docID);
+            assertFalse(false);
+        } catch (JLedgerClientException e) {
+            assertFalse(true);
+            e.printStackTrace();
+        }
+
+
 
     }
 
@@ -138,6 +163,30 @@ public class End2EndTest {
 
     @Test
     public void testGetChainOfEvents() {
+        String assetID;
+        String text;
+
+        final ChainOfCustody chainOfCustody = new ChainOfCustody();
+        chainOfCustody.setDocumentId("1234");
+        try {
+            ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
+            assetID = chainOfCustody1.getId();
+            text = "hello word!";
+            fabricCustodyLedgerClient.commentChain(assetID, text);
+            //fabricCustodyLedgerClient.completeTransfer(assetID);
+            List<ChainOfCustody> chainOfCustodyList;
+            chainOfCustodyList = fabricCustodyLedgerClient.getChainOfEvents(assetID);
+            Arrays.toString(chainOfCustodyList.toArray());
+            assertFalse(false);
+        } catch (JLedgerClientException e) {
+            assertFalse(true);
+            e.printStackTrace();
+        }
+
 
     }
 }
+
+
+//5a9654f5-ff72-49dd-9be3-b3b524228556
+//b6a14d80-6262-4d03-b8ea-4ee20ddfe075

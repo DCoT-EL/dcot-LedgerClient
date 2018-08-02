@@ -20,11 +20,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 
-final public class FabricCustodyLedgerClient   implements CustodyLedgerClient {
+final public class FabricCustodyLedgerClient extends HLFLedgerClient implements CustodyLedgerClient {
 
     private final static Logger log = LogManager.getLogger(FabricCustodyLedgerClient.class);
-    private ConfigManager configManager;
-    private LedgerInteractionHelper ledgerInteractionHelper;;
+    //private ConfigManager configManager;
+    //private LedgerInteractionHelper ledgerInteractionHelper;;
 
     public FabricCustodyLedgerClient() throws JLedgerClientException {
         doLedgerClient();
@@ -52,11 +52,11 @@ final public class FabricCustodyLedgerClient   implements CustodyLedgerClient {
         }
     }
 
-   /* @Override
-    public String doRegisterEvent(String eventName, ChaincodeEventListener chaincodeEventListener) throws JLedgerClientException {
-        return super.doRegisterEvent(eventName, chaincodeEventListener);
-    }
-*/
+    /* @Override
+     public String doRegisterEvent(String eventName, ChaincodeEventListener chaincodeEventListener) throws JLedgerClientException {
+         return super.doRegisterEvent(eventName, chaincodeEventListener);
+     }
+ */
     private String doInvokeByJson(Function fcn, List<String> args) throws JLedgerClientException {
         final InvokeReturn invokeReturn = ledgerInteractionHelper.invokeChaincode(fcn.name(), args);
         try {
