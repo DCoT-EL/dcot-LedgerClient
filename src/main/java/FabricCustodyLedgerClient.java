@@ -23,8 +23,6 @@ import java.util.concurrent.TimeoutException;
 final public class FabricCustodyLedgerClient extends HLFLedgerClient implements CustodyLedgerClient {
 
     private final static Logger log = LogManager.getLogger(FabricCustodyLedgerClient.class);
-    //private ConfigManager configManager;
-    //private LedgerInteractionHelper ledgerInteractionHelper;;
 
     public FabricCustodyLedgerClient() throws JLedgerClientException {
         doLedgerClient();
