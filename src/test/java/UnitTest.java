@@ -228,13 +228,53 @@ public class UnitTest {
             assetID = chainOfCustody1.getId();
             text = "hello word!";
             fabricCustodyLedgerClient.commentChain(assetID, text);
+            fabricCustodyLedgerClient.updateDocument(assetID, "bcubucbq6467392dhvug3332");
+            fabricCustodyLedgerClient.startTransfer(assetID, "5a9654f5-ff72-49dd-9be3-b3b524228556");
+            fabricCustodyLedgerClient.completeTransfer(assetID);
+            fabricCustodyLedgerClient.terminateChain(assetID);
             //fabricCustodyLedgerClient.completeTransfer(assetID);
             List<ChainOfCustody> chainOfCustodyList;
             chainOfCustodyList = fabricCustodyLedgerClient.getChainOfEvents(assetID);
-            Arrays.toString(chainOfCustodyList.toArray());
+            //Arrays.toString(chainOfCustodyList.toArray());
+            System.out.println(chainOfCustodyList.toArray().toString());
             assertFalse(false);
         } catch (JLedgerClientException e) {
             assertFalse(true);
+
+
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @Test
+    public void testGetChainOfEvents2() {
+        String assetID;
+        //String text;
+
+        final ChainOfCustody chainOfCustody = new ChainOfCustody();
+        chainOfCustody.setDocumentId("1234");
+        try {
+            ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
+            assetID = chainOfCustody1.getId();
+            fabricCustodyLedgerClient.updateDocument(assetID, "firstID");
+            fabricCustodyLedgerClient.updateDocument(assetID, "wevfvreabrebr");
+            fabricCustodyLedgerClient.updateDocument(assetID, "vsavrvregddh");
+            fabricCustodyLedgerClient.updateDocument(assetID, "hthtnbvbfbtr");
+            fabricCustodyLedgerClient.updateDocument(assetID, "nnfjyjshdgbgf");
+            fabricCustodyLedgerClient.updateDocument(assetID, "snbfynyrngngf");
+            fabricCustodyLedgerClient.updateDocument(assetID, "bcubucbq6467392dhvug3332");
+            fabricCustodyLedgerClient.updateDocument(assetID, "nfssnystntsstnst");
+            fabricCustodyLedgerClient.updateDocument(assetID, "lastID");
+            List<ChainOfCustody> chainOfCustodyList = new ArrayList<>();
+            chainOfCustodyList = fabricCustodyLedgerClient.getChainOfEvents(assetID);
+            //for(int i = 0; i < chainOfCustodyList.size(); i++) {
+            //    System.out.println(chainOfCustodyList.get(i).getDocumentId());
+            //}
+           assertFalse(false);
+        } catch (JLedgerClientException e) {
+           assertFalse(true);
 
 
             e.printStackTrace();
