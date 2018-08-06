@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1424a987-963a-4513-b5a7-75552e253482" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CustodyLedgerClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FabricCustodyLedgerClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config-fabric-network.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ChainOfCustody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Function.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/End2EndTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/End2EndTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/config-fabric-network.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/log4j2.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/End2EndTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/End2EndTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,26 +102,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="471" />
+          <entry key="dummy" value="8" />
+          <entry key="java" value="635" />
           <entry key="json" value="2" />
           <entry key="txt" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="471" />
+          <entry key="JAVA" value="635" />
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="65" />
+          <entry key="PLAIN_TEXT" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
+          <entry key="java" value="1" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="JAVA" value="1" />
           <entry key="JSON" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -141,10 +134,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/config-fabric-network.json">
+        <entry file="file://$PROJECT_DIR$/src/test/java/UnitTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+            <state relative-caret-position="120">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -152,8 +145,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/End2EndTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="191" column="24" lean-forward="true" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
+            <state relative-caret-position="285">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -227,13 +223,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CustodyLedgerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="30">
+              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -253,6 +256,7 @@
         <option value="$PROJECT_DIR$/src/main/java/FabricCustodyLedgerClient.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/resources/config-fabric-network.json" />
+        <option value="$PROJECT_DIR$/src/test/java/UnitTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/End2EndTest.java" />
       </list>
     </option>
@@ -354,7 +358,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533544189547" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533546731211" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jLedgerClient" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -373,39 +377,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.End2EndTest.testInitNewChain">
-    <configuration name="End2EndTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dcot-jLedgerClient" />
+  <component name="RunManager" selected="JUnit.UnitTest.testInitNewChain">
+    <configuration name="UnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dcotjLedgerClient" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="End2EndTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="End2EndTest.testCommentChain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dcot-jLedgerClient" />
+    <configuration name="UnitTest.testCommentChain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dcotjLedgerClient" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="End2EndTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest" />
       <option name="METHOD_NAME" value="testCommentChain" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="End2EndTest.testCompleteTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dcot-jLedgerClient" />
+    <configuration name="UnitTest.testCompleteTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dcotjLedgerClient" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="End2EndTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest" />
       <option name="METHOD_NAME" value="testCompleteTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="End2EndTest.testInitNewChain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTest.testInitNewChain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dcotjLedgerClient" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="End2EndTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest" />
       <option name="METHOD_NAME" value="testInitNewChain" />
       <option name="TEST_OBJECT" value="method" />
       <option name="PARAMETERS" value="" />
@@ -413,10 +417,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="End2EndTest.testStartTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dcot-jLedgerClient" />
+    <configuration name="UnitTest.testStartTransfer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dcotjLedgerClient" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="End2EndTest" />
+      <option name="MAIN_CLASS_NAME" value="UnitTest" />
       <option name="METHOD_NAME" value="testStartTransfer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -424,19 +428,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.End2EndTest.testInitNewChain" />
-      <item itemvalue="JUnit.End2EndTest" />
-      <item itemvalue="JUnit.End2EndTest.testStartTransfer" />
-      <item itemvalue="JUnit.End2EndTest.testCompleteTransfer" />
-      <item itemvalue="JUnit.End2EndTest.testCommentChain" />
+      <item itemvalue="JUnit.UnitTest.testInitNewChain" />
+      <item itemvalue="JUnit.UnitTest" />
+      <item itemvalue="JUnit.UnitTest.testStartTransfer" />
+      <item itemvalue="JUnit.UnitTest.testCompleteTransfer" />
+      <item itemvalue="JUnit.UnitTest.testCommentChain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.End2EndTest.testInitNewChain" />
-        <item itemvalue="JUnit.End2EndTest.testStartTransfer" />
-        <item itemvalue="JUnit.End2EndTest.testCommentChain" />
-        <item itemvalue="JUnit.End2EndTest.testCompleteTransfer" />
-        <item itemvalue="JUnit.End2EndTest" />
+        <item itemvalue="JUnit.UnitTest.testInitNewChain" />
+        <item itemvalue="JUnit.UnitTest.testStartTransfer" />
+        <item itemvalue="JUnit.UnitTest.testCommentChain" />
+        <item itemvalue="JUnit.UnitTest.testCompleteTransfer" />
+        <item itemvalue="JUnit.UnitTest" />
       </list>
     </recent_temporary>
   </component>
@@ -523,8 +527,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="1024" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2140625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2140625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -539,7 +544,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49921876" visible="true" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.50078124" side_tool="true" visible="true" weight="0.32972974" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50078124" side_tool="true" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.22594595" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32913387" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -568,38 +573,38 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/End2EndTest.java</url>
-          <line>66</line>
+          <url>file://$PROJECT_DIR$/src/test/java/UnitTest.java</url>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/End2EndTest.java</url>
-          <line>71</line>
+          <url>file://$PROJECT_DIR$/src/test/java/UnitTest.java</url>
+          <line>75</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/End2EndTest.java</url>
-          <line>84</line>
+          <url>file://$PROJECT_DIR$/src/test/java/UnitTest.java</url>
+          <line>88</line>
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/End2EndTest.java</url>
-          <line>87</line>
+          <url>file://$PROJECT_DIR$/src/test/java/UnitTest.java</url>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/End2EndTest.java</url>
-          <line>109</line>
+          <url>file://$PROJECT_DIR$/src/test/java/UnitTest.java</url>
+          <line>113</line>
           <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/End2EndTest.java</url>
-          <line>46</line>
+          <url>file://$PROJECT_DIR$/src/test/java/UnitTest.java</url>
+          <line>50</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -747,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CustodyLedgerClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FabricCustodyLedgerClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
@@ -764,10 +762,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CustodyLedgerClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/UnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/End2EndTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="191" column="24" lean-forward="true" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
+        <state relative-caret-position="285">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
