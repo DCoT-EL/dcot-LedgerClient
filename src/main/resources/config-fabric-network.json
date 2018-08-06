@@ -8,7 +8,7 @@
   "chaincode": {
     "path": "github.com/hyperledger/fabric/examples/chaincode/go/dcot-chaincode",
     "name": "dcot-chaincode",
-    "version": "1.0"
+    "version": "3.4"
   },
   "organizations": [
     {
@@ -33,9 +33,10 @@
       ],
       "users": [
         {
-          "name": "Admin",
+          "name": "clod16",
+          "secret":"faredge2018",
           "roles": [
-            "admin"
+            "user"
           ]
         }
       ]

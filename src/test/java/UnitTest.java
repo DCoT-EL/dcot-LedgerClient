@@ -14,10 +14,6 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-/**
- * @author clod16
- */
-
 public class UnitTest {
 
     static FabricCustodyLedgerClient fabricCustodyLedgerClient;
@@ -137,7 +133,7 @@ public class UnitTest {
              ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
 
         String assetID = chainOfCustody1.getId();
-        String receiverID = "b6a14d80-6262-4d03-b8ea-4ee20ddfe075";
+        String receiverID = "5a9654f5-ff72-49dd-9be3-b3b524228556";
         fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
         fabricCustodyLedgerClient.cancelTransfer(assetID);
         assertFalse(false);
@@ -187,7 +183,7 @@ public class UnitTest {
             String receiverID = "5a9654f5-ff72-49dd-9be3-b3b524228556";
             assetID = chainOfCustody1.getId();
             docID = "4321";
-            fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
+            //fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
             ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.updateDocument(assetID, docID);
             if( chainOfCustody2.getDocumentId() == docID) {
                 assertFalse(false);
@@ -210,9 +206,8 @@ public class UnitTest {
         try{
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             String assetID = chainOfCustody1.getId();
-
-            chainOfCustody.setId(assetID);
-            assertEquals(chainOfCustody,chainOfCustody1);
+            ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.getAssetDetails(assetID);
+            assertEquals(chainOfCustody2,chainOfCustody1);
 
         }catch (JLedgerClientException e){
             assertFalse(true);
@@ -240,6 +235,8 @@ public class UnitTest {
             assertFalse(false);
         } catch (JLedgerClientException e) {
             assertFalse(true);
+
+
             e.printStackTrace();
         }
 
