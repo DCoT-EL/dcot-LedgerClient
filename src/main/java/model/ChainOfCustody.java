@@ -7,7 +7,7 @@ public class ChainOfCustody {
 
     private String id;
     private String trackingId;
-    private Integer weightOfParcel;
+    private double  weightOfParcel;
     private String sortingCenterDestination;
     private String distributionOfficeCode;
     private String distributionZone;
@@ -20,7 +20,7 @@ public class ChainOfCustody {
     public ChainOfCustody() {
     }
 
-    public ChainOfCustody(String status, String id, String trackingId, Integer weightOfParcel, String sortingCenterDestination, String distributionOfficeCode, String distributionZone, String deliveryMan, String codeOwner, String documentId, String text) {
+    public ChainOfCustody(String status, String id, String trackingId, double  weightOfParcel, String sortingCenterDestination, String distributionOfficeCode, String distributionZone, String deliveryMan, String codeOwner, String documentId, String text) {
 
         this.id = id;
         this.trackingId = trackingId;
@@ -33,7 +33,7 @@ public class ChainOfCustody {
         this.documentId = documentId;
         this.text = text;
         this.status = status;
-   
+
     }
 
 
@@ -69,11 +69,11 @@ public class ChainOfCustody {
         this.trackingId = trackingId;
     }
 
-    public Integer getWeightOfParcel() {
+    public double  getWeightOfParcel() {
         return weightOfParcel;
     }
 
-    public void setWeightOfParcel(Integer weightOfParcel) {
+    public void setWeightOfParcel(double  weightOfParcel) {
         this.weightOfParcel = weightOfParcel;
     }
 

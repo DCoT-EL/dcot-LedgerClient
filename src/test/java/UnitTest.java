@@ -108,10 +108,8 @@ public class UnitTest {
 
         final ChainOfCustody chainOfCustody = new ChainOfCustody();
         chainOfCustody.setDocumentId("1234");
-
-        ChainOfCustody chainOfCustody1 = null;
         try {
-            chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
+            ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
 
             assetID = chainOfCustody1.getId();
             fabricCustodyLedgerClient.commentChain(assetID, text);
@@ -284,6 +282,7 @@ public class UnitTest {
     }
 }
 
-
-//5a9654f5-ff72-49dd-9be3-b3b524228556
-//b6a14d80-6262-4d03-b8ea-4ee20ddfe075
+//        UID of clod16 is 5a9654f5-ff72-49dd-9be3-b3b524228556 with role dcot-operator
+//        UID of ascat is 15a8256b-faae-4a82-964d-754f26890446 with role dcot-operator
+//        UID of postman is 69199da1-e9c8-459c-9ab4-89ba1bb10a66 with role dcot-user
+//        UID of test is 934b0d89-eb53-4f03-9086-79e555253afe with role dcot-user
