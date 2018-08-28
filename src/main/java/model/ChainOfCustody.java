@@ -16,11 +16,12 @@ public class ChainOfCustody {
     private String documentId;
     private String text;
     private String status;
+    private Event event;
 
     public ChainOfCustody() {
     }
 
-    public ChainOfCustody(String status, String id, String trackingId, double  weightOfParcel, String sortingCenterDestination, String distributionOfficeCode, String distributionZone, String deliveryMan, String codeOwner, String documentId, String text) {
+    public ChainOfCustody(String status, String id, String trackingId, double  weightOfParcel, String sortingCenterDestination, String distributionOfficeCode, String distributionZone, String deliveryMan, String codeOwner, String documentId, String text, Event event) {
 
         this.id = id;
         this.trackingId = trackingId;
@@ -33,9 +34,16 @@ public class ChainOfCustody {
         this.documentId = documentId;
         this.text = text;
         this.status = status;
-
+        this.event = event;
     }
 
+    public Event getEvent() {
+        return event;
+    }
+
+    public void setEvent(Event event) {
+        this.event = event;
+    }
 
     public String getStatus() {
         return status;

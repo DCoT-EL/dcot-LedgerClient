@@ -56,20 +56,22 @@ public class End2EndTest {
         chainOfCustody.setWeightOfParcel(1.3);
         chainOfCustody.setDistributionOfficeCode("a1234_u4347");
         chainOfCustody.setDistributionZone("Rome");
-        chainOfCustody.setSortingCenterDestination("POSTE_ITALIANE_ROME");
+
+
+
 
         try{
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             String assetID = chainOfCustody1.getId();
 
-            fabricCustodyLedgerClient.startTransfer(assetID, "69199da1-e9c8-459c-9ab4-89ba1bb10a66");
+            //fabricCustodyLedgerClient.startTransfer(assetID, "69199da1-e9c8-459c-9ab4-89ba1bb10a66");
             fabricCustodyLedgerClient.commentChain(assetID, "PRIORITY");
             fabricCustodyLedgerClient.updateDocument(assetID, "NEW-DOCUMENT-ID");
             ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.getAssetDetails(assetID);
-            fabricCustodyLedgerClient.cancelTransfer(assetID);
-            fabricCustodyLedgerClient.startTransfer(assetID, "934b0d89-eb53-4f03-9086-79e555253afe");
-            fabricCustodyLedgerClient.cancelTransfer(assetID);
-            fabricCustodyLedgerClient.startTransfer(assetID, "5a9654f5-ff72-49dd-9be3-b3b524228556");
+            //fabricCustodyLedgerClient.cancelTransfer(assetID);
+            //fabricCustodyLedgerClient.startTransfer(assetID, "934b0d89-eb53-4f03-9086-79e555253afe");
+            //fabricCustodyLedgerClient.cancelTransfer(assetID);
+            fabricCustodyLedgerClient.startTransfer(assetID, "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8");
             fabricCustodyLedgerClient.completeTransfer(assetID);
             fabricCustodyLedgerClient.terminateChain(assetID);
             List<ChainOfCustody> custodyLedgerClientList = fabricCustodyLedgerClient.getChainOfEvents(assetID);
@@ -84,7 +86,6 @@ public class End2EndTest {
 
 }
 
-// UID of clod16 is 5a9654f5-ff72-49dd-9be3-b3b524228556 with role dcot-operator
-//UID of ascat is 15a8256b-faae-4a82-964d-754f26890446 with role dcot-operator
-//UID of postman is 69199da1-e9c8-459c-9ab4-89ba1bb10a66 with role dcot-user
-//UID of test is 934b0d89-eb53-4f03-9086-79e555253afe with role dcot-user
+//UID of clod16 is e0b537be-9dfe-47c9-9df3-f2b7c6b357e4 with role dcot-operator
+//UID of postman is 15d9beae-8e5a-45a2-9cbf-38aff4481129 with role dcot-user
+//UID of poste-italiane-operator is 1426e078-9d9d-4354-82dd-6ccb15e1bba6 with role dcot-user
