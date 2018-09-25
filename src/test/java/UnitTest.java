@@ -15,9 +15,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 public class UnitTest {
-
     static FabricCustodyLedgerClient fabricCustodyLedgerClient;
     static ChaincodeEventListener chaincodeEventListener;
+    //28ad1427-9ef3-4e6c-ac20-f669bedaf711
+    final static private String ENG_OP = "e5ddab9f-f9d6-4d27-bf25-f0b6cbe8a899";
 
     @BeforeClass
     public static void begin() {
@@ -71,7 +72,7 @@ public class UnitTest {
         try {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             assetID = chainOfCustody1.getId();
-            receiverID = "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8";
+            receiverID = ENG_OP;
             fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
             //ChainOfCustody chainOfCustody2 = fabricCustodyLedgerClient.initNewChain(chainOfCustody3);
         } catch (JLedgerClientException e) {
@@ -83,14 +84,13 @@ public class UnitTest {
     @Test
     public void testCompleteTransfer() {
         String assetID;
-        String receiverID;
+        String receiverID = ENG_OP;
 
         final ChainOfCustody chainOfCustody = new ChainOfCustody();
         chainOfCustody.setDocumentId("1234");
         try {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
             assetID = chainOfCustody1.getId();
-            receiverID = "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8";
             fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
             fabricCustodyLedgerClient.completeTransfer(assetID);
             assertFalse(false);
@@ -131,7 +131,7 @@ public class UnitTest {
              ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
 
         String assetID = chainOfCustody1.getId();
-        String receiverID = "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8";
+        String receiverID =ENG_OP;
         fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
         fabricCustodyLedgerClient.cancelTransfer(assetID);
         assertFalse(false);
@@ -140,9 +140,6 @@ public class UnitTest {
             System.out.println(e.getMessage());
             //e.printStackTrace();
         }
-
-
-
     }
 
     @Test
@@ -154,7 +151,7 @@ public class UnitTest {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
 
             String assetID = chainOfCustody1.getId();
-            String receiverID = "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8";
+            String receiverID = ENG_OP;
             fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
             fabricCustodyLedgerClient.cancelTransfer(assetID);
             fabricCustodyLedgerClient.terminateChain(assetID);
@@ -164,9 +161,6 @@ public class UnitTest {
             System.out.println(e.getMessage());
             //e.printStackTrace();
         }
-
-
-
     }
 
     @Test
@@ -178,7 +172,7 @@ public class UnitTest {
 
         try {
             ChainOfCustody chainOfCustody1 = fabricCustodyLedgerClient.initNewChain(chainOfCustody);
-            String receiverID = "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8";
+            String receiverID = ENG_OP;
             assetID = chainOfCustody1.getId();
             docID = "4321";
             //fabricCustodyLedgerClient.startTransfer(assetID, receiverID);
@@ -227,7 +221,7 @@ public class UnitTest {
             text = "comment chain!!";
             fabricCustodyLedgerClient.commentChain(assetID, text);
             fabricCustodyLedgerClient.updateDocument(assetID, "doc-3265sgs");
-            fabricCustodyLedgerClient.startTransfer(assetID, "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8");
+            fabricCustodyLedgerClient.startTransfer(assetID, ENG_OP);
             fabricCustodyLedgerClient.completeTransfer(assetID);
             //fabricCustodyLedgerClient.terminateChain(assetID);
             //fabricCustodyLedgerClient.completeTransfer(assetID);
@@ -258,13 +252,13 @@ public class UnitTest {
             assetID = chainOfCustody1.getId();
             //fabricCustodyLedgerClient.startTransfer(assetID, "e0b537be-9dfe-47c9-9df3-f2b7c6b357e4");
             fabricCustodyLedgerClient.updateDocument(assetID, "firstID");
-            fabricCustodyLedgerClient.updateDocument(assetID, "wevfvreabrebr");
+           /* fabricCustodyLedgerClient.updateDocument(assetID, "wevfvreabrebr");
             fabricCustodyLedgerClient.updateDocument(assetID, "vsavrvregddh");
             fabricCustodyLedgerClient.updateDocument(assetID, "hthtnbvbfbtr");
             fabricCustodyLedgerClient.updateDocument(assetID, "nnfjyjshdgbgf");
             fabricCustodyLedgerClient.updateDocument(assetID, "snbfynyrngngf");
             fabricCustodyLedgerClient.updateDocument(assetID, "bcubucbq6467392dhvug3332");
-            fabricCustodyLedgerClient.updateDocument(assetID, "nfssnystntsstnst");
+            fabricCustodyLedgerClient.updateDocument(assetID, "nfssnystntsstnst");*/
             fabricCustodyLedgerClient.updateDocument(assetID, "lastID");
             List<ChainOfCustody> chainOfCustodyList = new ArrayList<>();
             chainOfCustodyList = fabricCustodyLedgerClient.getChainOfEvents(assetID);
@@ -281,11 +275,16 @@ public class UnitTest {
 
 
     }
+
+    /*@Test
+    public void testCallChaincode(){
+
+        try{
+            fabricCustodyLedgerClient.callCaincode("Call chaincode");
+
+        }catch (JLedgerClientException e) {
+            e.printStackTrace();
+        }
+
+    }*/
 }
-
-        //UID of clod16 is e0b537be-9dfe-47c9-9df3-f2b7c6b357e4 with role dcot-operator
-        //UID of postman is 15d9beae-8e5a-45a2-9cbf-38aff4481129 with role dcot-user
-        //UID of poste-italiane-operator is 1426e078-9d9d-4354-82dd-6ccb15e1bba6 with role dcot-user
-//2b7cfc5c-68dd-4f3c-b6e5-ef754d66257b
-
-// eng-operator UID is 3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8

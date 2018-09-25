@@ -25,4 +25,6 @@ public interface CustodyLedgerClient   {
     ChainOfCustody getAssetDetails(String id) throws JLedgerClientException;
 
     List<ChainOfCustody> getChainOfEvents(String id) throws JLedgerClientException;
+
+    void callCaincode(String arg ) throws JLedgerClientException;
 }

@@ -19,6 +19,7 @@ public class End2EndTest {
 
     static FabricCustodyLedgerClient fabricCustodyLedgerClient;
     static ChaincodeEventListener chaincodeEventListener;
+    final static private String ENG_OP = "8e3f3672-4c37-4f4f-9a06-ab14e8b9db91";
 
     @BeforeClass
     public static void begin() {
@@ -71,7 +72,7 @@ public class End2EndTest {
             //fabricCustodyLedgerClient.cancelTransfer(assetID);
             //fabricCustodyLedgerClient.startTransfer(assetID, "934b0d89-eb53-4f03-9086-79e555253afe");
             //fabricCustodyLedgerClient.cancelTransfer(assetID);
-            fabricCustodyLedgerClient.startTransfer(assetID, "3bd77cc1-b48d-4751-8ba1-6ce05f9fabc8");
+            fabricCustodyLedgerClient.startTransfer(assetID, ENG_OP);
             fabricCustodyLedgerClient.completeTransfer(assetID);
             fabricCustodyLedgerClient.terminateChain(assetID);
             List<ChainOfCustody> custodyLedgerClientList = fabricCustodyLedgerClient.getChainOfEvents(assetID);
@@ -85,7 +86,3 @@ public class End2EndTest {
     }
 
 }
-
-//UID of clod16 is e0b537be-9dfe-47c9-9df3-f2b7c6b357e4 with role dcot-operator
-//UID of postman is 15d9beae-8e5a-45a2-9cbf-38aff4481129 with role dcot-user
-//UID of poste-italiane-operator is 1426e078-9d9d-4354-82dd-6ccb15e1bba6 with role dcot-user

@@ -202,4 +202,18 @@ final public class FabricCustodyLedgerClient extends HLFLedgerClient implements 
         final List<ChainOfCustody> chainOfCustodyList = (List<ChainOfCustody>) JsonConverter.convertFromJson(payload, ChainOfCustody.class, true);
         return chainOfCustodyList;
     }
+
+    @Override
+    public void callCaincode(String arg) throws JLedgerClientException {
+        if (arg == null) {
+            throw new JLedgerClientException(Function.callCaincode.name() + " is in error, No input data!");
+        }
+        List<String> args = new ArrayList<>();
+        args.add(arg);
+        final String payload = doInvokeByJson(Function.callCaincode, args);
+        log.debug("Payload retrieved: " + payload);
+
+    }
+
+
 }

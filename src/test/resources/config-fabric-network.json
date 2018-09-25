@@ -1,14 +1,15 @@
 {
   "name": "fabric-network",
-  "type": "hlfv1.1",
+  "type": "hlfv1.2",
   "channelName": "ledgerchannel",
   "timeout": 5000,
-  "cryptoconfigdir": "",
+  "cryptoconfigdir": "/home/claudio/Scrivania/crypto-config",
   "tls": false,
   "chaincode": {
-    "path": "github.com/hyperledger/fabric/examples/chaincode/go/dcot-chaincode",
-    "name": "dcot-chaincode",
-    "version": "6.1"
+    "path": "analytics-chaincode",
+    "name": "analytics-chaincode",
+    "version": "1.1",
+    "lang":"NODE"
   },
   "organizations": [
     {
@@ -33,10 +34,10 @@
       ],
       "users": [
         {
-          "name": "eng-operator",
-          "secret":"faredge2018",
+          "name": "Admin",
+          "secret":"",
           "roles": [
-            "user"
+            "admin"
           ]
         }
       ]
