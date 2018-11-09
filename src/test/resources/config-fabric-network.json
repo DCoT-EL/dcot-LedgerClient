@@ -4,12 +4,11 @@
   "channelName": "ledgerchannel",
   "timeout": 5000,
   "cryptoconfigdir": "/home/claudio/Scrivania/crypto-config",
-  "tls": false,
+  "tls": true,
   "chaincode": {
-    "path": "analytics-chaincode",
-    "name": "analytics-chaincode",
-    "version": "1.1",
-    "lang":"NODE"
+    "path": "github.com/hyperledger/fabric/examples/chaincode/go/dcot-chaincode",
+    "name": "dcot-chaincode",
+    "version": "1.1"
   },
   "organizations": [
     {
@@ -35,7 +34,7 @@
       "users": [
         {
           "name": "Admin",
-          "secret":"",
+          "secret": "",
           "roles": [
             "admin"
           ]
